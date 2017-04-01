@@ -1,0 +1,34 @@
+{
+  "name": "add-remove-replace",
+  "version": "0.0.0",
+  "description": "Simple package to add, remove or replace content inside strings.",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest"
+  },
+  "keywords": [
+    "add",
+    "remove",
+    "replace",
+    "string",
+    "array"
+  ],
+  "author": "Gustavo Tonietto",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-flowtype": "^2.30.4",
+    "jest": "^19.0.2",
+    "regenerator-runtime": "^0.10.3",
+    "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "replaceall": "^0.1.6"
+  }
+}
