@@ -1,6 +1,6 @@
 {
   "name": "add-remove-replace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple package to add, remove or replace content inside strings.",
   "main": "./dist/bundle.js",
   "scripts": {
