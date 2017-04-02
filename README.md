@@ -49,7 +49,7 @@ remove('123', '123String'); // 'String'
 
 ### replace
 
-###### replace(content: string, newConten: string, target: ?string)
+###### replace(content: string, newContent: string, target: ?string)
 
 ```javascript
 // replace all 123
