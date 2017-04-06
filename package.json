@@ -1,6 +1,6 @@
 {
   "name": "add-remove-replace",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0",
   "description": "Simple package to add, remove or replace content inside strings.",
   "main": "./index.js",
   "scripts": {
