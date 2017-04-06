@@ -2,18 +2,36 @@
 var path = require('path');
 var webpack = require('webpack');
 
-module.exports = {
-  entry: './lib/index.js',
+var env = process.env.WEBPACK_ENV;
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+
+var libraryName = 'add-remove-replace';
+var outputFile = libraryName + '.js';
+var plugins = [], outputFile;
+
+if (env === 'build') {
+  plugins.push(new UglifyJsPlugin({ minimize: true }));
+  outputFile = libraryName + '.min.js';
+} else {
+  outputFile = libraryName + '.js';
+}
+
+var config = {
+  entry: __dirname + '/src/index.js',
+  devtool: 'source-map',
   output: {
-    filename: 'add-remove-replace.js',
-    path: path.resolve(__dirname, ''),
+    filename: outputFile,
+    path: path.resolve(__dirname, 'lib'),
+    library: libraryName,
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, use: 'babel-loader' },
+      { test: /\.(js)$/, use: 'babel-loader' },
     ],
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-  ],
+  plugins: plugins
 };
+
+module.exports = config;
