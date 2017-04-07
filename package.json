@@ -1,8 +1,8 @@
 {
   "name": "add-remove-replace",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple package to add, remove or replace content inside strings.",
-  "main": "./index.js",
+  "main": ".lib/index.js",
   "scripts": {
     "build": "WEBPACK_ENV=build webpack",
     "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
